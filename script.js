@@ -23,7 +23,7 @@ const displayMessage = function (message) {
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
-  console.log(guess, typeof guess);
+  // console.log(guess, typeof guess);
 
   // When there is no input
   if (!guess) {
@@ -50,7 +50,7 @@ document.querySelector('.check').addEventListener('click', function () {
     if (score > 1) {
       // document.querySelector('.message').textContent =
       //   guess > secretNumber ? 'Too high!' : 'Too low!';
-      // score--;
+      score--;
       displayMessage(guess > secretNumber ? 'Too high!' : 'Too low!');
 
       document.querySelector('.score').textContent = score;
